@@ -1,0 +1,102 @@
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 10%);
+  color: white;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+label {
+  font-size: 3em;
+  text-align: center;
+  color: hsl(208, 86%, 60%);
+}
+
+input, button {
+  font-size: 1.5em;
+}
+
+input[type="range"] {
+  width: 50%;
+}
+
+form p {
+  font-size: 2em;
+  color: hsl(208, 86%, 60%);
+}
+
+input[type="submit"], button {
+  margin-top: 1em;
+  padding: 0.25em;
+  border-radius: 0.25em;
+  transition: box-shadow 400ms ease-in-out;
+}
+
+main {
+  display: grid;
+  width: 95vmin;
+  height: 95vmin;
+  grid-gap: 0.5em;
+  padding: 0.5em;
+  margin: auto;
+}
+
+main div {
+  border: 0.25em solid white;
+  transition: all 600ms ease-in-out;
+}
+
+main div:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+main .selected {
+  border-color: transparent;
+}
+
+main .selected:hover {
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
+button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button:hover, input[type="submit"]:hover {
+  cursor: pointer;
+  box-shadow: 0.25em 0.25em 0.25em 0.25em hsl(208, 86%, 60%),
+    -0.25em -0.25em 0.25em 0.25em hsl(208, 86%, 60%),
+    -0.25em 0.25em 0.25em 0.25em hsl(208, 86%, 60%),
+    0.25em -0.25em 0.25em 0.25em hsl(208, 86%, 60%);
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0.5em;
+}
+
+section p {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+section p span {
+  color: hsl(208, 86%, 60%);
+}
